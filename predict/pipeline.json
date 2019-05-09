@@ -1,0 +1,23 @@
+{
+    "pipeline": {
+      "name": "predict"
+    },
+    "input": {
+      "cross": [ {
+        "pfs": {
+          "glob": "/",
+          "repo": "streaming"
+        }
+      },
+      {
+        "pfs": {
+          "glob": "/",
+          "repo": "train"
+        }
+      } ]
+    },
+    "transform": {
+      "cmd": [ "pipenv", "run", "python", "predict.py" ],
+      "image": "yifangma93/movie-recommend-predict"
+    }
+  }

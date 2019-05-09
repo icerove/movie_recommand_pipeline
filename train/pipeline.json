@@ -1,0 +1,15 @@
+{
+    "pipeline": {
+      "name": "train"
+    },
+    "transform": {
+      "cmd": [ "pipenv", "run", "python", "train.py" ],
+      "image": "yifangma93/movie-recommend-train"
+    },
+    "input": {
+      "pfs": {
+        "repo": "training",
+        "glob": "/*"
+      }
+    }
+  }
